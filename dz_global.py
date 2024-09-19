@@ -12,13 +12,13 @@
 
 # Задачи на условия (if else):
 # Номер 9.1
-#int(input("Введите данные: "))
-#c = ""
-#int = c 
-#if not int:
- #   print(False)
-#else:
- #   print(True)
+# input("Введите данные: ")
+# c = ""
+# int_wer = c 
+# if not int_wer:
+#    print(False)
+# else:
+#    print(True)
 
 # Номер 9.2
 #x1 = int(input("Введите делимое: "))
@@ -264,17 +264,6 @@
 # dict = {"имя": "Антон","возраст": 29, "пол": "мужской"}
 # print(dict)
 
-# Упражнение 5.3
-# d = {'1': 1.29, '2': 0.43}
-
-
-
-
-# https://metanit.com/python/practice/8.php
-# https://pythonist.ru/python-slovari-zadachi-dlya-nachinayushhih/
-
-
-
 # задачи на функции (function):
 # https://okpython.net/python/python_zadachnik/python_zadachnik.html#ex_12
 # https://pynative.com/python-functions-exercise-with-solutions/
@@ -283,5 +272,89 @@
 
 
 # задачи на рекурсию (function):
-# (внизу) https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-13-rekursivnye-funkcii-2023-01-23
-# https://w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion.php
+# Упражнение 1
+# def fun(num):
+#     if num==1:
+#         return(num)
+#     return fun (num-1)*num
+# print(fun(3))
+
+#Упражнение 2
+# def fun(n,m):
+#     if (m==1):
+#         return(n)
+#     if (m!=1):
+#         return(n*fun(n,m-1))
+# n = int(input("Введите число: "))
+# m = int(input("Введите степень: "))
+# print(fun(n,m))
+
+#Упражнение 3
+# def fun_garmonic(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return 1/n+fun_garmonic(n-1)
+# print(fun_garmonic(5))
+
+#Упражнение 4
+# def fun_prog(a,b,c, res=[]):
+#     if c == 0:
+#      return res + [a]
+#     else:
+#        return fun_prog(a*b,b,c-1,res+[a])
+# print(fun_prog(5,10,7))
+
+#Упражнение 5 
+# def fun_nod(a,b):
+#     if b==0:
+#      return a
+#     if a>b:
+#      return fun_nod(b,a%b)
+#     else:
+#      return fun_nod(a,b%a) 
+# print(fun_nod(a,b))
+
+#Упражнение 6
+# def fun_rec(b):
+#     if b < 1:
+#         return 0
+#     else:
+#         return b + fun_rec(b - 2)
+# print(fun_rec(5))
+
+# Упражнение 1 (2 сссылка)
+# def fun_summ(arr,index=0,sum=0):
+#     if(len(arr)!= index):
+#         return fun_summ(arr,index+1,sum+arr[index])
+#     else:
+#         return(sum)
+# list_one=[3,7,8,10,11,23,0]
+# print(fun_summ(list_one))
+        
+#Упражнение 2 (2 ссылка)
+# def convertion(a,b):
+#     cstr = "1B2C4B6O7E"
+#     if a<b:
+#         return cstr[a]
+#     else:
+#         return convertion(a//b,b)+cstr[a%b]
+# print(convertion(1357,16))
+
+#Упражнение 4 (2 ссылка)
+# def factor(n):
+#     if n<=1:
+#         return(n)
+#     else:
+#         return n*factor(n-1)
+# print(factor(7))
+
+#Упражнение 5
+# def fib(n):
+#     if n==1 or n==2:
+#         return 1
+#     else:
+#         return fib(n-1)+fib(n-2)
+# print(fib(7))
+
+         
