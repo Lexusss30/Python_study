@@ -7,9 +7,6 @@
 # print(var1,var2,var3,sep=",")
 # print(f"{var1},{var2},{var3}",sep= ",")
 
-# Номер 2.2
-
-
 # Задачи на условия (if else):
 # Номер 9.1
 # input("Введите данные: ")
@@ -162,14 +159,6 @@
 #     nz = input ("Нажмите Y или y для завершения программы:")
 #     if (nz == "Y" or nz=="y"): break
 
-# Упражнение 2
-
-
-
-# https://okpython.net/python/python_zadachnik/python_zadachnik.html#ex_10
-
-
-
 # задачи на списки (array):
 # Упражнение 1 
 # list1 = [1,2,10,13,22,25,77,89,20,94,93]
@@ -264,13 +253,6 @@
 # dict = {"имя": "Антон","возраст": 29, "пол": "мужской"}
 # print(dict)
 
-# задачи на функции (function):
-# https://okpython.net/python/python_zadachnik/python_zadachnik.html#ex_12
-# https://pynative.com/python-functions-exercise-with-solutions/
-# https://proglib.io/p/funkcii-v-python-5-zadach-dlya-trenirovki-args-kwargs-i-lambda-funkciy-2022-06-15
-
-
-
 # задачи на рекурсию (function):
 # Упражнение 1
 # def fun(num):
@@ -357,4 +339,36 @@
 #         return fib(n-1)+fib(n-2)
 # print(fib(7))
 
-         
+# задачи на классы (class)    
+# Номер 1
+# class Cars:
+#     manuf = "BMW"
+#     model = "X5M"
+#     year = "2022 г.в"
+#     aspeed = "100 км/ч"
+#     def __init__(self,manuf,model,year,aspeed):
+#         self.manuf = manuf
+#         self.model = model
+#         self.year = year
+#         self.aspeed = aspeed
+#     print(manuf, model,year,aspeed,sep= ",")
+#     def aspd(self,speed, dist):
+#      return speed//dist
+#     print()
+
+# Номер 2
+# class Calc:
+#    def __init__(self,num1=2,num2=10):
+#       self.num1 = num1
+#       self.num2 = num2
+#     def sum (self,num1=2,num2=10):
+#       return self.num1 + self.num2
+#     def mins (self,num1=2,num2=10):
+#       return self.num1 - self.num2
+#    def ymn (self,num1=2,num2=10):
+#       return self.num1 * self.num2
+#    def dele (self,num1=2,num2=10):
+#       return self.num1 // self.num2
+# c = Calc()
+    
+
