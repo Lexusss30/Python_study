@@ -342,33 +342,64 @@
 # задачи на классы (class)    
 # Номер 1
 # class Cars:
-#     manuf = "BMW"
-#     model = "X5M"
-#     year = "2022 г.в"
-#     aspeed = "100 км/ч"
 #     def __init__(self,manuf,model,year,aspeed):
 #         self.manuf = manuf
 #         self.model = model
 #         self.year = year
 #         self.aspeed = aspeed
-#     print(manuf, model,year,aspeed,sep= ",")
-#     def aspd(self,speed, dist):
-#      return speed//dist
-#     print()
+#         print(manuf, model,year,aspeed,sep= ",")
+#     def aspd(self, dist):
+#      return self.aspeed * dist
+  
+# car_red = Cars ("BMW","X5M","2024 г.в", 150)
+# print(car_red.aspd(200))
 
 # Номер 2
 # class Calc:
-#    def __init__(self,num1=2,num2=10):
+#    def __init__(self,num1,num2):
 #       self.num1 = num1
 #       self.num2 = num2
-#     def sum (self,num1=2,num2=10):
+#    def sum (self,num1,num2):
 #       return self.num1 + self.num2
-#     def mins (self,num1=2,num2=10):
+#    def mins (self,num1,num2):
 #       return self.num1 - self.num2
-#    def ymn (self,num1=2,num2=10):
+#    def ymn (self,num1,num2):
 #       return self.num1 * self.num2
-#    def dele (self,num1=2,num2=10):
+#    def dele (self,num1,num2):
 #       return self.num1 // self.num2
-# c = Calc()
-    
+# c = Calc(50,22)
+# print ("Сложение = ", c.sum(50,22))
+# print ("Вычитание = ",c.mins(50,22))
+# print ("Умножение =",c.ymn(50,22))
+# print ("Деление = ",c.dele(50,22))
+
+# Номер 3 
+# class Soda:
+#     def __init__(self, ingredient=None):
+#         self.ingredient = ingredient
+ 
+#     def show_my_drink(self):
+#         if self.ingredient:
+#             print(f'Газировка и {self.ingredient}')
+#         else:
+#             print('Обычная газировка')
+# drink = Soda ()
+# drink2 = Soda("Цитрус")
+# print(drink,drink2)
+
+
+
+# Номер 4 
+# class Nikola():
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#         if self.name == "Николай":
+#             self.name = name
+#         else:
+#             self.name = f"Я не {name}, а Николай!"
+# person1 = Nikola ("Николай", 34)
+# person2 = Nikola ("Владислав", 67)
+# print(person1.name)
+# print(person2.name)
 
