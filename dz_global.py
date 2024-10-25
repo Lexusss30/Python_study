@@ -403,3 +403,6 @@
 # print(person1.name)
 # print(person2.name)
 
+# Задачи lambda 
+
+
