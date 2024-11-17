@@ -405,4 +405,37 @@
 
 # Задачи lambda 
 
+#Задание 2
+# my_list_1 = [1,2,3,4,"Япония",4,"Китай"]
+# arr_2 = list(filter(lambda x: type (x) != str, my_list_1))
+# arr_2 = list(filter(lambda x: isinstance (x, int), my_list_1)) #Второй вариант!
+# print(arr_2)
+
+#Задание 3 
+# num = 2 
+# arr_1 = [1,2,3,[4,5,6],7,8]
+# arr_answer = list(map(lambda x: x * (num + 1), arr_1 ))
+# print(arr_answer)
+
+#Задачи на файлы (open)
+
+#Задание 1 
+# Вариант 1
+# text = input("Введите текст: ")
+# with open("study.txt","a") as text_test:
+#     text_test.write(text)
+
+#Вариант 2 
+# text = input("Введите текст: ")
+# test_file = open("study.txt","w")
+# print(test_file)
+# test_file.write(text)
+# test_file.close
+
+#Задание 2
+
+
+
+
+
 
