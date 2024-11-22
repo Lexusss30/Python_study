@@ -413,7 +413,7 @@
 
 #Задание 3 
 # num = 2 
-# arr_1 = [1,2,3,[4,5,6],7,8]
+# arr_1 = [1,2,3,7,8]
 # arr_answer = list(map(lambda x: x * (num + 1), arr_1 ))
 # print(arr_answer)
 
@@ -434,6 +434,58 @@
 
 #Задание 2
 
+# import json
+
+# list_data = {}
+# print("Добро пожаловать!")
+# text = input("Введите одну из доступных команд(new/del/exit): ")
+# while (text != "exit" and text != "ex"):
+#     if text == "new":
+#         username = input("Введите свой никнейм: ")
+#         password = input("Введите пароль: ")
+#         list_data[username]=password   
+#     elif text == "del":
+#         user_del = input("Введите никнейм для удаления из базы данных: ")
+#         list_data.pop(user_del)
+#     with open("new.json" , "w") as file:
+#         json.dump(list_data , file)   
+#     text = input("Введите одну из доступных команд(new/del/exit): ")
+    
+    
+import json
+
+division = 0
+multiplication = 0
+subtraction = 0
+addition = 0
+calculator_arr = []
+print("Добро пожаловать в калькулятор!")
+text = input("Введите start для начала работы калькулятора: ")
+while ( text == "start"):
+    number = int(input("Введите первое число: "))
+    number_two = int(input("Введите второе число: "))
+    action = input ("Действие: ")
+    with open("calculator.json" , "w") as file:
+        json.dump(calculator_arr , file)  
+    if action == "*":
+        multiplication = number * number_two
+        print ("Произведение чисел = ", multiplication)
+    elif action == "/":
+        division = number / number_two
+        print ("Частное чисел = ", multiplication)
+    elif action == "-":
+        subtraction = number - number_two
+        print ("Разность чисел = ", subtraction)
+    elif action == "+":
+        addition = number + number_two
+        print ("Сумма чисел = ", addition)
+text = input("Введите start для начала работы калькулятора: ")
+
+
+
+
+
+    
 
 
 
