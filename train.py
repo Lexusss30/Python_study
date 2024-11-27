@@ -312,6 +312,129 @@
 #             print(2, end = "\t")
 #     print()
 
+#10.4 Решение задач с помощью вложенных циклов
+
+#Задача 1
+# people = int(input("Введите количество людей в очереди: "))
+# for hour in range(people + 1):
+#     print(f"Идет {hour} час")
+#     for number in range(hour, people):
+#         print(f"Номер в очереди: {number} ")
+#     print()
+# print("Очередь обслужена.")
+
+#Задача 2
+# digit = int(input("Количество чисел в последовательности: "))
+# cipher_count = 0
+# for _ in range(digit):
+#     number = int(input("Введите число: "))
+#     while number:
+#         if number % 10 > 5:
+#             cipher_count += 1
+#         number //= 10
+
+# print("Количество чисел больше 5 в последовательности:", cipher_count)
+
+#Задача 3 
+# size = int(input("Введите размер таблицы: "))
+# for start in range(size + 1):
+#     for num in range(start, size + 1):
+#         print(num, end = "\t")
+#     print()
+
+#10.6 Практическая работа
+
+#Задача 1
+# for row in range(6):
+#    for col in range(0, 12, 2):
+#         print(row + col , end = "\t")
+#    print()
+
+#Задача 2
+# number = int(input("Введите число: "))
+# for row in range(1, number + 1):
+#     for col in range(row):
+#         print(row, end = " ")
+#     print()
+
+#Задача 3
+# length = int(input("Введите длинну: "))
+# height = int(input("Введите высоту: "))
+# for row in range(length):
+#     for col in range(height):
+#         if col == 0 or col == height - 1:
+#             print("|", end = " ")
+#         elif row == 0 or row == length - 1:
+#             print("-", end = " ")
+#         else:
+#             print(" ", end = " ")
+#     print()
+
+
+#Задача 4
+# list_numbers = int(input("Количество чисел в последовательности: "))
+# simple_number = 0
+# for nums in range(list_numbers):
+#     number = int(input("Введите число: "))
+#     if number == 1 or number == 0:
+#         simple_number -= 1 
+#     for element in range(2, number):
+#         if number % element == 0:
+#             break
+#     else:
+#         simple_number += 1
+# print()
+# print("Простых чисел в последовательности:", simple_number)
+
+#Задача 5
+# quantity_numbers = int(input("Количество чисел в последовательности: "))
+# max_summ = 0
+# numeric = 0
+# for elements in range(quantity_numbers):
+#     number = int(input("Введите число: "))
+#     summ = 0
+#     temporary_number = number
+#     while number > 0:
+#         summ += number % 10
+#         number //= 10   
+#     if summ > max_summ:
+#         max_summ = summ
+#         numeric = temporary_number
+# print(f"Число {numeric} имеет максимальную сумму цифр: {max_summ}")
+
+#Задача 6
+# height = int(input("Введите высоту пирамиды: "))
+# size = (2 * height) - 2
+# for row in range(0, height):
+#     for col in range(0, size):
+#         print(end = " ")
+#     size = size - 1 
+#     for el in range(0, row + 1):
+#         print("#", end = " ")
+#     print(" ")
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+        
+
+        
+
+
 
 
 

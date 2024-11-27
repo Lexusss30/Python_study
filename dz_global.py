@@ -452,34 +452,34 @@
 #     text = input("Введите одну из доступных команд(new/del/exit): ")
     
     
-import json
+# import json
 
-division = 0
-multiplication = 0
-subtraction = 0
-addition = 0
-calculator_arr = []
-print("Добро пожаловать в калькулятор!")
-text = input("Введите start для начала работы калькулятора: ")
-while ( text == "start"):
-    number = int(input("Введите первое число: "))
-    number_two = int(input("Введите второе число: "))
-    action = input ("Действие: ")
-    with open("calculator.json" , "w") as file:
-        json.dump(calculator_arr , file)  
-    if action == "*":
-        multiplication = number * number_two
-        print ("Произведение чисел = ", multiplication)
-    elif action == "/":
-        division = number / number_two
-        print ("Частное чисел = ", multiplication)
-    elif action == "-":
-        subtraction = number - number_two
-        print ("Разность чисел = ", subtraction)
-    elif action == "+":
-        addition = number + number_two
-        print ("Сумма чисел = ", addition)
-text = input("Введите start для начала работы калькулятора: ")
+# division = 0
+# multiplication = 0
+# subtraction = 0
+# addition = 0
+# calculator_arr = []
+# print("Добро пожаловать в калькулятор!")
+# text = input("Введите start для начала работы калькулятора: ")
+# while ( text == "start"):
+#     number = int(input("Введите первое число: "))
+#     number_two = int(input("Введите второе число: "))
+#     action = input ("Действие: ")
+#     with open("calculator.json" , "w") as file:
+#         json.dump(calculator_arr , file)  
+#     if action == "*":
+#         multiplication = number * number_two
+#         print ("Произведение чисел = ", multiplication)
+#     elif action == "/":
+#         division = number / number_two
+#         print ("Частное чисел = ", multiplication)
+#     elif action == "-":
+#         subtraction = number - number_two
+#         print ("Разность чисел = ", subtraction)
+#     elif action == "+":
+#         addition = number + number_two
+#         print ("Сумма чисел = ", addition)
+# text = input("Введите start для начала работы калькулятора: ")
 
 
 
