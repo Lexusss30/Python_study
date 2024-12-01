@@ -548,14 +548,17 @@
 # window = Tk()
 # window.title("Поймай кнопку")
 # window.geometry("980x720")
+# window["bg"] = "green"
 
 # def movement():
 #     x = randint(1, 980)
 #     y = randint(1, 720)
 #     button_mov.place_configure(x=x, y=y)
 
-# button_mov = Button(text="Лови меня", command=movement, font=("Segoe Print" , 15), fg="#b2f704")
-# button_mov.place(x=100 , y = 100)
+# label_clicer = Label(window, text="Хочешь повышения зарплаты?" , font=("Verdana", 18), fg="#0400fc", bg="#d0f402")
+# label_clicer.place(x=320 , y = 250)
+# button_mov = Button(text="Тогда поймай меня", command=movement, font=("Segoe Print" , 15), fg="#0c0c0c")
+# button_mov.place(x=390 , y = 300)
 
 
 # window.mainloop()
