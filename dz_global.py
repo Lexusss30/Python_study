@@ -279,7 +279,7 @@
 #         return 1/n+fun_garmonic(n-1)
 # print(fun_garmonic(5))
 
-#Упражнение 4
+# Упражнение 4
 # def fun_prog(a,b,c, res=[]):
 #     if c == 0:
 #      return res + [a]
@@ -432,7 +432,9 @@
 # test_file.write(text)
 # test_file.close
 
-#Задание 2
+#Задачи на JSON
+
+#Задание 1
 
 # import json
 
@@ -451,7 +453,8 @@
 #         json.dump(list_data , file)   
 #     text = input("Введите одну из доступных команд(new/del/exit): ")
     
-    
+# Задание 2
+
 # import json
 
 # division = 0
@@ -480,6 +483,84 @@
 #         addition = number + number_two
 #         print ("Сумма чисел = ", addition)
 # text = input("Введите start для начала работы калькулятора: ")
+
+#Задачи на многопоточную сортировку пузырьком
+
+#Задача 1 
+
+# import threading
+# from array import array
+
+# def fun_number():
+#     return (even_numbers, odd_numbers)
+
+
+# even_numbers = array("b", [2, 6, 4, 10, 8])
+# odd_numbers = array("b", [3, 7, 5, 13, 11])
+
+
+
+# threading.Thread
+# thread_one = threading.Thread(target = fun_number)
+# thread_one.start()
+
+# def sort_arr(new_numbers):
+#     for element in new_numbers:
+#         for index in range(len(new_numbers) - 1):
+#             if (new_numbers[index]) > new_numbers[index + 1]:
+#                 element = new_numbers[index]
+#                 new_numbers[index] = new_numbers[index + 1]
+#                 new_numbers[index + 1] = element
+
+# print(sort_arr(even_numbers))
+
+#Задачи на TK start
+
+#Задание 1 
+
+# from tkinter import *
+
+# def click_button():
+#     global click
+#     click += 1
+#     label_clicer.configure(text=click)
+
+# click = 0
+# window = Tk()
+# window.title("Кликер")
+# window.geometry("980x720")
+
+# label_clicer = Label(window, text= click , font=("Arial Black", 18))
+# label_clicer.place(x=460 , y = 250)
+
+# button_counter = Button(window, text= "Нажимай", command=click_button, font=("Segoe Print", 25), fg="#3d04f7")
+# button_counter.place(x=380 , y = 300)
+
+
+# window.mainloop()
+
+#Задание 2 
+
+
+# from tkinter import *
+# from random import *
+
+# window = Tk()
+# window.title("Поймай кнопку")
+# window.geometry("980x720")
+
+# def movement():
+#     x = randint(1, 980)
+#     y = randint(1, 720)
+#     button_mov.place_configure(x=x, y=y)
+
+# button_mov = Button(text="Лови меня", command=movement, font=("Segoe Print" , 15), fg="#b2f704")
+# button_mov.place(x=100 , y = 100)
+
+
+# window.mainloop()
+
+
 
 
 

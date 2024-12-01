@@ -413,11 +413,129 @@
 #         print("#", end = " ")
 #     print(" ")
 
+#11.2 Ввод вещественного числа. Функции float и round
+
+#Задача 1
+# bet = int(input("Сколько ставим? "))
+# coefficient = float(input("Какой коэффициент? "))
+
+# win = round(bet * coefficient, 2)
+# print(f"Потенциальный выигрыш: {win}")
+
+#Задача 2 
+# age = int(input("Сколько лет? "))
+# temperature = float(input("Какая температура? "))
+
+# present = round(age * 1.5 * temperature, 2)
+# print(f"Сумма подарка сыну составит: {present} рублей")
+
+#11.3 Приведение типов между int и float
+
+#Задача 1 
+# money = int(input("Сколько у вас чатлов? "))
+# conversion = round(money / 2200, 2)
+# print(f"Вы успешно перевели валюту в CR. У вас {conversion} CR")
+# print(f"Можно купить кораблей: {money // 1100}")
 
 
+#11.4 Математические функции. Работа с модулем math
 
+#Задача 1 
+# import math
 
+# a = float(input("Введите длину стороны a: ")) 
+# b = float(input("Введите длину стороны b: ")) 
+# c = float(input("Введите длину стороны c: ")) 
 
+# p = (a + b + c) / 2
+# S = math.sqrt(p * (p - a)*(p - b)*(p - c))
+# print(f"Площадь треугольника по формуле Герона = {S}")
+
+#Задача 2 
+# import math
+
+# print("Добро пожаловать, положение персонажа: 0,0")
+# distance = int(input("Введите пройденное расстояние: "))
+# rotation_angle = float(input("Введите угол поворота: "))
+
+# coordinate_x = distance * math.cos(rotation_angle)
+# coordinate_y = distance * math.sin(rotation_angle)
+# print(f"Местоположение персонажа: {coordinate_x}, {coordinate_y}")
+
+#Задача 3 
+# import math
+
+# user_number = float(input("Введите число: "))
+# print(math.floor(user_number))
+# print(math.ceil(user_number))
+# print(abs(user_number))
+# print(math.sqrt(user_number))
+# print(math.exp(user_number))
+# print(math.log(user_number))
+# print(math.log2(user_number))
+# print(math.log10(user_number))
+# print(math.sin(user_number), math.cos(user_number))
+# if user_number >= 0:
+#     print(math.factorial(int(user_number)))
+# else:
+#     print("Факториал отрицательного числа не определен")
+
+#11.6 Практическая работа
+
+#Задача 1 
+# price = int(input("Стоимость покупки в евро: "))
+# usd = 60.87
+# euro_rub = 1.25 * usd
+# price_rub = round(price * euro_rub, 4)
+# print(f"Стоимость в рублях: {price_rub}")
+
+#Альтернативное решение (Задача 1)
+# price = int(input("Стоимость покупки в евро: "))
+# usd = 60.87
+# euro = 1.25
+# price_rub = price * euro * usd
+# print(f"Стоимость в рублях: {price_rub}")
+
+#Задача 2
+# import math
+
+# quantity = int(input("Введите количество чисел: "))
+# for _ in range(quantity):
+#     number = float(input("Введите число: "))
+#     if number <= 0:
+#         number = math.floor(number)
+#         print(f"x = {number} exp(x) = {math.exp(number)}")
+#     else:
+#         number = math.ceil(number)
+#         print(f"x = {number} log(x) = {math.log(number)}")
+
+#Задача 3
+# import math
+
+# file_size = int(input("Укажите размер файла для скачивания: "))
+# speed = int(input("Какова скорость вашего соединения: "))
+# download = 0
+# second = 0
+# while download < file_size:
+#     second = second + 1
+#     download = min(download + speed, file_size)
+#     percent = round(download / file_size * 100)
+#     print(f"Прошло {second} сек. Скачано {download} из {file_size} Мб ({percent} %)")
+
+#Задача 4 
+# number = float(input("Введите число: ")) 
+# print("Первая цифра после десятичной точки:", int(number * 10) % 10)
+
+#Задача 5
+# import math 
+
+# radius = float(input('Введдите радиус планеты: ')) 
+# earth = 1.08321 * 10 ** 12 
+# volume = 4/3 * math.pi * radius**3 
+# if earth > volume: 
+#   print("Обьем планеты земля больше в ", round(earth / volume, 3), "раз" ) 
+# if earth < volume: 
+#   print("Обьем планеты земля меньше в", round(volume / earth, 3), "раз" )
 
 
 
