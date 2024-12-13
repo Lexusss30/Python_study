@@ -474,40 +474,17 @@
 #     elif action == "/":
 #         answer = number / number_two
 #         print ("Частное чисел = ", answer)
-#     elif action == "-":
-#         answer = number - number_two
-#         print ("Разность чисел = ", answer)
-#     elif action == "+":
-#         answer = number + number_two
-#         print ("Сумма чисел = ", answer)
-#     with open("calculator.json" , "w") as file:
-#         calculator_arr.append(f"{number} {action} {number_two} = {answer}") 
-#         json.dump(calculator_arr , file) 
-#     text = input("Введите start для начала работы калькулятора: ")
+    # elif action == "-":
+    #     answer = number - number_two
+    #     print ("Разность чисел = ", answer)
+    # elif action == "+":
+    #     answer = number + number_two
+    #     print ("Сумма чисел = ", answer)
+    # with open("calculator.json" , "w") as file:
+    #     calculator_arr.append(f"{number} {action} {number_two} = {answer}") 
+    #     json.dump(calculator_arr , file) 
+    # text = input("Введите start для начала работы калькулятора: ")
 
-#Задачи на многопоточную сортировку пузырьком
-
-#Задача 1 
-
-# import threading
-# from array import array
-
-# arr = array("b" , [1,2,3,7,13,18,21]) 
-
-# def sort_arr(arr_loc):
-#     for element in arr_loc:
-#         for index in range(0, len(arr) // 2):
-#             if(arr_loc[index] > arr_loc[index+1]):
-#                 element = arr_loc[index]
-#                 arr_loc[index] = arr_loc[index+1]
-#                 arr_loc[index + 1] = element
-        # for index in range((len / 2), len(arr)):
-        #     if(arr_loc[index] > arr_loc[index+1]):
-        #         element = arr_loc[index]
-        #         arr_loc[index] = arr_loc[index+1]
-        #         arr_loc[index + 1] = element
-#     return(arr_loc)
-# print(sort_arr(arr))
 
 # Задачи на TK start
 
