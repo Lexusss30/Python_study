@@ -537,9 +537,420 @@
 # if earth < volume: 
 #   print("Обьем планеты земля меньше в", round(volume / earth, 3), "раз" )
 
+#12.2 Функции и их вызов
+
+#Задача 1 
+# def greeting():
+#     print("Привет!")
+#     print("Добро пожаловать!")
+ 
+# while True:
+#     user_choise = input("Зайдёте? Да/Нет: ")
+#     if user_choise == "Да":
+#         greeting()
+#         print("Следующий.\n")
+#     elif user_choise == "Нет":
+#         print("Следующий.\n")
+
+#Задача 2 
+# def food_counting():
+#     a = int(input())
+#     b = int(input())
+#     print("Всего", a+b, "шт.")
+
+# print("Сколько мешков рыбы и мяса?")
+# food_counting()
+# print("Сколько вёдер воды и молока?")
+# food_counting()
+# print("Сколько вёдер воды и молока?")
+# food_counting()
+
+#Задача 3
+# def data_request():
+#     surname = input("Фамилия: ")
+#     name = input("Имя: ")
+#     street = input("Улица: ")
+#     house = int(input("Дома: "))
+#     print()
+
+# data_request()
+# data_request()
+# data_request()
+
+#12.3 Функции с одним параметром
+
+#Задача 1
+# def about_water(price):
+#     print("Название: КлирВотер\n"
+#           "Производитель: ВодЗавод\n"
+#           "Цена:", price)
+
+# for _ in range(3):
+#     price_of_water = int(input("Введите цену "))
+#     about_water(price_of_water)
+
+#Задача 2
+# import math
+
+# def sphere_area(radius):
+#     print(4 * math.pi * radius ** 2)
+
+# def sphere_volume(radius):
+#     print(4 / 3 * math.pi * radius ** 3)
+
+# radius_of_planet = float(input("Введите радиус планеты: "))
+# sphere_area(radius_of_planet)
+# sphere_volume(radius_of_planet)
+
+#Задача 3
+# def is_prime(number):
+#     if number < 2:
+#         print("Не простое")
+#     else:
+#         for i in range(2, int(number ** 0.5) + 1):
+#             if number % i == 0:
+#                 print("Не простое")
+#                 break
+#         else:
+#             print("Простое")
+
+# n = int(input("Введите количество чисел в последовательности: "))
+# for i in range(n):
+#     new_number = int(input("Введите число: "))
+#     is_prime(new_number)
+
+#12.4 Функции с несколькими параметрами
+
+#Задача 1
+# import math
+
+# def mean_calc(x, y):
+#     sum_of_numbers, count_of_numbers = 0, 0
+#     for i in range(x, y + 1):
+#         sum_of_numbers += i
+#         count_of_numbers += 1
+#     print("Среднее:", round(sum_of_numbers / count_of_numbers, 2))
+# a = int(input("Введите левую границу: "))
+# b = int(input("Введите правую границу: "))
+
+# mean_calc(a, b)
+
+#Задача 2
+# def print_all_info(surname, name, country, city, street, house, flat):
+#     print("Фамилия:", surname)
+#     print("Имя:", name)
+#     print("Страна проживания:", country)
+#     print("Город:", city)
+#     print("Улица:", street)
+#     print("Номер дома:", house)
+#     print("Номер квартиры:", flat)
+
+# user_surname = input("Введите фамилию: ")
+# user_name = input("Введите имя: ")
+# user_street = input("Введите улицу: ")
+# user_house = input("Введите номер дома: ")
+
+# for _ in range(3):
+#     user_surname = input("Введите фамилию: ")
+#     user_name = input("Введите имя: ")
+#     user_country = input("Введите страну проживания: ")
+#     user_city = input("Введите город: ")
+#     user_street = input("Введите улицу: ")
+#     user_house = input("Введите номер дома: ")
+#     user_flat = input("Введите номер квартиры: ")
+
+# print_all_info(user_surname, user_name, user_country, user_city, user_street, user_house, user_flat)
+
+#Задача 3
+# import math
+
+# def my_distance(x, y):
+#     distance = math.sqrt(x ** 2 + y ** 2)
+#     print(distance)
 
 
-            
+# def their_distance(x_1, x_2, y_1, y_2):
+#     distance = math.sqrt((x_2 - x_1) ** 2 + (y_2 - y_1) ** 2)
+#     print(distance)
+
+
+# user_choice = int(input("Найти расстояние от себя до точки (1) или найти расстояние между двумя произвольными точками (2)? "))
+# if user_choice == 1:
+#     target_x = float(input("Введите координату X цели: "))
+#     target_y = float(input("Введите координату Y цели: "))
+#     my_distance(target_x, target_y)
+# elif user_choice == 2:
+#     target_x_1 = float(input("Введите координату X цели 1: "))
+#     target_y_1 = float(input("Введите координату Y цели 1: "))
+#     target_x_2 = float(input("Введите координату X цели 2: "))
+#     target_y_2 = float(input("Введите координату Y цели 2: "))
+#     their_distance(target_x_1, target_x_2, target_y_1, target_y_2)
+# else:
+#     print("Ввод неверный")
+
+#12.6 Практическая работа
+
+#Задача 1 
+# def summa_n(number):
+#     sum_numbers = 0
+#     for element in range(1, number + 1):
+#         sum_numbers += element
+#     print(f"Сумма чисел последовательности от 1 до {number} равна {sum_numbers}")
+
+# number = int(input("Введите число: "))
+
+
+# summa_n(number)
+
+
+# summa_n()
+
+#Задача 2
+# def positive():
+#     print("Положительное!")
+
+# def negative():
+#     print("Отрицательное!")
+
+# def test():
+#     number = int(input("Введите целое число: "))
+#     if number > 0:
+#         positive()
+#     elif number == 0:
+#         print("Введите любое число, кроме 0.")
+#     else:
+#         negative()
+
+
+# test()
+
+#Задача 3
+# def summ_num(number): 
+#     summ_num = 0 
+#     while number > 0: 
+#         summ_num += (number % 10) 
+#         number //= 10 
+#     print("Cумма цифр:",summ_num) 
+
+# def max_num(number): 
+#     max_num = -1 
+#     while number > 0: 
+#         if number % 10 > max_num: 
+#             max_num = number % 10 
+#         number //= 10 
+#     print("Максимальная цифра этого числа:", max_num) 
+
+# def min_num(number): 
+#     min_num = 10 
+#     while number > 0: 
+#         if number % 10 < min_num: 
+#             min_num = number % 10 
+#         number //= 10 
+#     print("Минимальная цифра этого числа:", min_num) 
+
+# while True: 
+#     number = int(input("Введите число: ")) 
+#     action = int(input("Какое действие нужно сделать?\n1 - сумма цифр\n2 - максимальная цифра\n3 - минимальная цифра\n")) 
+#     if action == 1: 
+#         summ_num(number) 
+#     elif action == 2: 
+#         max_num(number) 
+#     elif action == 3: 
+#         min_num(number) 
+#     else: 
+#         print("Ошибка ввода.")
+
+#Задача 4
+# def count_letters():
+#     number_count, letter_count = 0, 0
+#     for symbol in text:
+#         if symbol == letter:
+#             letter_count += 1
+#         elif symbol == str(number):
+#             number_count += 1
+#     print(f"\nКоличество цифр, {number}: {number_count}") 
+#     print(f"Количество букв, {letter}: {letter_count}")
+
+# text = input("Введите текст: ")
+# number = int(input("Какую цифру ищем? "))
+# letter = input("Какую букву ищём? ")
+
+# count_letters()
+
+#Задача 5
+# from random import *
+
+# def rock_paper_scissors(): 
+#     user_choice = input("Введите ваш выбор (камень, ножницы, бумага): ") 
+#     computer_choice = choice(["камень", "ножницы", "бумага"]) 
+
+#     if user_choice == computer_choice: 
+#         print("Ничья!") 
+#     elif (user_choice == "камень" and computer_choice == "ножницы") or (user_choice == "ножницы" and computer_choice == "бумага") or (user_choice == "бумага" and computer_choice == "камень"): 
+#         print("Вы победили!") 
+#     else: 
+#         print("Вы проиграли!") 
+
+# def guess_the_number(): 
+#     number = randint(1, 100) 
+#     guess = None 
+#     attempts = 0 
+
+#     while guess != number: 
+#         guess = int(input("Угадайте число от 1 до 100: ")) 
+#         attempts += 1 
+
+#         if guess < number: 
+#             print("Загаданное число больше.") 
+#         elif guess > number: 
+#             print("Загаданное число меньше.") 
+
+#     print(f"Поздравляю! Вы угадали число за {attempts} попыток.") 
+
+# def main_menu(): 
+#     print("Добро пожаловать в игровое приложение!") 
+#     print("Выберите игру:") 
+#     print("1. Камень, ножницы, бумага") 
+#     print("2. Угадай число") 
+
+#     choice = input("Введите номер игры: ") 
+
+#     if choice == "1": 
+#         rock_paper_scissors() 
+#     elif choice == "2": 
+#         guess_the_number() 
+#     else: 
+#         print("Некорректный выбор.") 
+
+# main_menu()
+
+
+#13.2 Возврат значений из функций. Оператор return
+
+#Задача 1 
+# n = int(input("Введите N: "))
+
+# def summa_n(n):
+#     if n==0:
+#         return n
+#     else:
+#         return(n+summa_n(n-1))
+    
+# y = summa_n(n)
+
+# def summa_n(y):
+#     if y==0:
+#         return y
+#     else:
+#         return(y+summa_n(y-1)) 
+
+# print(f"Сумма чисел от 1 до { n } = { summa_n(n) } ")
+# print(f"Сумма чисел от 1 до { summa_n(n) } = { summa_n(y)}")
+
+#Задача 2 
+# def gcd(x, y):
+#     if x > y:
+#         small = y
+#     else:
+#         small = x
+#     gcd_find = 1
+#     for i in range(1, small + 1):
+#         if (x % i == 0) and (y % i == 0):
+#             gcd_find = i
+
+#     return gcd_find
+
+
+# first_number = int(input("Первое число: "))
+# second_number = int(input("Второе число: "))
+# print("НОД=", gcd(first_number, second_number))
+
+#13.3 Представление вещественных чисел в программе
+
+#Задача 1 
+# x = 1 
+# count = 0 
+# while x != 0:
+#     x /= 2 
+#     count += 1 
+#     print(x)
+# print("Количество итераций:", count)
+
+#Задача 2
+ 
+# while True:
+    # Если мы хотим проверить мантиссу - то нам нужно работать с числом как со строкой, поэтому float к input добавлять пока не будем
+    # delta = input("Введите число в эксп. форме ")
+    # проверка, что мантисса равна числу от 1 до 9
+    # сперва получим отдельно часть строки до символа 'e'
+    # mantissa = ''
+    # for cipher in delta:
+    #     if cipher == 'e':
+    #         break
+    #     mantissa += cipher
+    # получив мантиссу - мы можем проверить, что она удовлетворяет условию (равна числу от 1 до 9)
+    # так же мы сразу можем добавить проверку порядка - если порядок отрицательный, то введенное число будет меньше 1, это мы и проверим:
+#     if 1 <= float(mantissa) <= 9 and float(delta) < 1:
+#         print('Число введено верно!')
+#         delta = float(delta)
+#         break
+#     else:
+#         print("Число введено с ошибкой, мантисса всегда должна быть равна числу от 1 до 9, а порядок должен быть меньше нуля")
+
+
+# start_number = 1
+# count = 0
+# while start_number <= 2:
+#     start_number += delta
+#     count += 1
+
+# print("Кол-во прибавлений: ", count)
+
+#13.4 Особенности работы с вещественными числами
+
+#Задача 1
+# import math
+
+# def check_exponent_change(tax, new_tax):
+#     total = tax + new_tax
+#     degree_e_tax = math.floor(math.log10(tax))
+#     degree_e_total = math.floor(math.log10(total))
+#     if degree_e_tax != degree_e_total:
+#         return True
+#     else:
+#         return False
+ 
+# country_budget = float(input('Введите бюджет страны: '))
+# budget_receipts = float(input('Введите новые поступления (налог): '))
+# is_increase = check_exponent_change(country_budget, budget_receipts)
+
+# if is_increase:
+#     print('Бюджет увеличится')
+# else:
+#     print('Бюджет не изменится')
+
+#Задача 2
+# def eqv(a, b, c):
+#     return abs((a + b) - c) <= 1e-15
+
+
+# first = float(input("Введите первое число: "))
+# second = float(input("Введите второе число: "))
+# third = float(input("Введите третье число: "))
+# print(eqv(first, second, third))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

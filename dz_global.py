@@ -457,32 +457,33 @@
 
 # import json
 
-# division = 0
-# multiplication = 0
-# subtraction = 0
-# addition = 0
+# answer = 0
 # calculator_arr = []
+# with open("calculator.json") as file:
+#     calculator_arr = json.load(file)
 # print("Добро пожаловать в калькулятор!")
 # text = input("Введите start для начала работы калькулятора: ")
 # while ( text == "start"):
 #     number = int(input("Введите первое число: "))
 #     number_two = int(input("Введите второе число: "))
 #     action = input ("Действие: ")
-#     with open("calculator.json" , "w") as file:
-#         json.dump(calculator_arr , file)  
+
 #     if action == "*":
-#         multiplication = number * number_two
-#         print ("Произведение чисел = ", multiplication)
+#         answer = number * number_two
+#         print ("Произведение чисел = ", answer)
 #     elif action == "/":
-#         division = number / number_two
-#         print ("Частное чисел = ", multiplication)
+#         answer = number / number_two
+#         print ("Частное чисел = ", answer)
 #     elif action == "-":
-#         subtraction = number - number_two
-#         print ("Разность чисел = ", subtraction)
+#         answer = number - number_two
+#         print ("Разность чисел = ", answer)
 #     elif action == "+":
-#         addition = number + number_two
-#         print ("Сумма чисел = ", addition)
-# text = input("Введите start для начала работы калькулятора: ")
+#         answer = number + number_two
+#         print ("Сумма чисел = ", answer)
+#     with open("calculator.json" , "w") as file:
+#         calculator_arr.append(f"{number} {action} {number_two} = {answer}") 
+#         json.dump(calculator_arr , file) 
+#     text = input("Введите start для начала работы калькулятора: ")
 
 #Задачи на многопоточную сортировку пузырьком
 
@@ -491,32 +492,26 @@
 # import threading
 # from array import array
 
-# def fun_number():
-#     return (even_numbers, odd_numbers)
+# arr = array("b" , [1,2,3,7,13,18,21]) 
 
+# def sort_arr(arr_loc):
+#     for element in arr_loc:
+#         for index in range(0, len(arr) // 2):
+#             if(arr_loc[index] > arr_loc[index+1]):
+#                 element = arr_loc[index]
+#                 arr_loc[index] = arr_loc[index+1]
+#                 arr_loc[index + 1] = element
+        # for index in range((len / 2), len(arr)):
+        #     if(arr_loc[index] > arr_loc[index+1]):
+        #         element = arr_loc[index]
+        #         arr_loc[index] = arr_loc[index+1]
+        #         arr_loc[index + 1] = element
+#     return(arr_loc)
+# print(sort_arr(arr))
 
-# even_numbers = array("b", [2, 6, 4, 10, 8])
-# odd_numbers = array("b", [3, 7, 5, 13, 11])
+# Задачи на TK start
 
-
-
-# threading.Thread
-# thread_one = threading.Thread(target = fun_number)
-# thread_one.start()
-
-# def sort_arr(new_numbers):
-#     for element in new_numbers:
-#         for index in range(len(new_numbers) - 1):
-#             if (new_numbers[index]) > new_numbers[index + 1]:
-#                 element = new_numbers[index]
-#                 new_numbers[index] = new_numbers[index + 1]
-#                 new_numbers[index + 1] = element
-
-# print(sort_arr(even_numbers))
-
-#Задачи на TK start
-
-#Задание 1 
+# Задание 1 
 
 # from tkinter import *
 
@@ -530,10 +525,10 @@
 # window.title("Кликер")
 # window.geometry("980x720")
 
-# label_clicer = Label(window, text= click , font=("Arial Black", 18))
+# label_clicer = Label(text= click , font=("Arial Black", 18))
 # label_clicer.place(x=460 , y = 250)
 
-# button_counter = Button(window, text= "Нажимай", command=click_button, font=("Segoe Print", 25), fg="#3d04f7")
+# button_counter = Button(text= "Нажимай", command=click_button, font=("Segoe Print", 25), fg="#3d04f7")
 # button_counter.place(x=380 , y = 300)
 
 
@@ -551,25 +546,110 @@
 # window["bg"] = "green"
 
 # def movement():
-#     x = randint(1, 980)
-#     y = randint(1, 720)
+#     x = randint(5, 980)
+#     y = randint(5, 720)
 #     button_mov.place_configure(x=x, y=y)
 
-# label_clicer = Label(window, text="Хочешь повышения зарплаты?" , font=("Verdana", 18), fg="#0400fc", bg="#d0f402")
-# label_clicer.place(x=320 , y = 250)
-# button_mov = Button(text="Тогда поймай меня", command=movement, font=("Segoe Print" , 15), fg="#0c0c0c")
-# button_mov.place(x=390 , y = 300)
+# label_clicer = Label(text="Хочешь повышения зарплаты?" , font=("Verdana", 18), fg="#0400fc", bg="#d0f402")
+# label_clicer.place(x = 350 , y = 260)
+# button_mov = Button(text="Поймай меня", command=movement, font=("Segoe Print", 15), fg="#0c0c0c")
+# button_mov.place(x = 410 , y = 300)
 
 
 # window.mainloop()
 
+#Задача на entry
+
+#Задание 1
+
+from tkinter import*
+
+window = Tk()
+window.title("Калькулятор")
+window.geometry("300x300")
+window.config(bg="#000")
+
+def addition():
+    print(int(first_number.get()) + int(second_number.get()))
+
+def subtraction():
+    print(int(first_number.get()) - int(second_number.get()))
+
+def division():
+        print(int(first_number.get()) / int(second_number.get()))
+
+def multiplication():
+    print(int(first_number.get()) * int(second_number.get()))
+
+
+first_text = Label(text="Введите первое число", font=("Segoe Print", 8), bg="white")
+first_text.place(x=90, y=20)
+
+first_number = Entry(width=5, font=("Arial", 13), bg="white", fg="lime")
+first_number.place(x=130, y=50)
+
+second_text = Label(text="Введите второе число", font=("Segoe Print", 8), bg="white")
+second_text.place(x=90, y=80)
+
+second_number = Entry(width=5, font=("Arial", 13), bg="white", fg="lime")
+second_number.place(x=130, y=110)
+
+info_text = Label(text="Выберите действие:",font=("Arial Black", 10), bg="purple" )
+info_text.place(x=80, y=150)
+
+addition_btn = Button(text="Сложение", command=addition, font=("Times New Roman", 9),  bg="green")
+addition_btn.place(x=130, y=185)
+
+subtraction_btn = Button(text="Вычитание", command=subtraction, font=("Times New Roman", 9),  bg="green")
+subtraction_btn.place(x=130, y=210)
+
+division_btn = Button(text="Деление", command=division, font=("Times New Roman", 9),  bg="green")
+division_btn.place(x=130, y=235)
+
+multiplication_btn = Button(text="Умножение", command=multiplication, font=("Times New Roman", 9),  bg="green")
+multiplication_btn.place(x=130, y=260)
 
 
 
+window.mainloop()
+
+#Задание 2 
+
+# from tkinter import*
+# from tkinter import messagebox
+
+# def click():
+#     username = entry_login.get()
+#     password = entry_password.get()
+#     messagebox.showinfo("Авторизация пройдена!", f"User: {username} pass: {password}")
+
+# window = Tk()
+# window.title("Авторизация пользователя")
+# window.geometry("900x700")
+# window.config(bg="#000")
 
 
+# greetings = Label(text="Добро пожаловать!", font=("monospaced", 25), fg="#33bb41", bg="black")
+# greetings.place(x=310, y=10)
 
-    
+# login = Label(text="Логин", font=("Helvetica", 15), fg="aquamarine", bg="black")
+# login.place(x=430, y = 160)
+
+# entry_login = Entry(width=11, font=(" Arial", 13), bg="black", fg="lime")
+# entry_login.place(x=410, y = 200)
+
+# password = Label(text="Пароль", font=("Helvetica", 15), fg="aquamarine", bg="black")
+# password.place(x=420, y = 230)
+
+# entry_password = Entry(width=11, font=(" Arial", 13), bg="black", fg="lime")
+# entry_password.place(x=410, y = 270)
+
+# but_enter = Button(text="Войти", command=click, font=("Times New Roman", 17), fg="black", bg="purple")
+# but_enter.place(x=420, y=320)
+
+
+# window.mainloop()
+
 
 
 
