@@ -940,21 +940,143 @@
 # print(eqv(first, second, third))
 
 
+#13.6 Практическая работа
+
+#Задача 1 
+
+# def transformation(number):
+#     degree = 0 
+#     if number < 1:
+#         while number < 1:
+#             number *= 10
+#             degree -= 1
+#     elif number >= 10:
+#         while number >= 10:
+#             number /= 10
+#             degree += 1
+#         print("Формат плавающей точки x = ", number, "* 10 ** ", degree)
+
+# number = float(input("Введите положительное число: "))
+# if number > 0:
+#     transformation(number)
+# else:
+#     print("Введите положительное число.")
+
+#Задача 2 
+
+# def max_of_two(first_numbers, second_numbers): 
+#   return max(first_numbers, second_numbers) 
+
+# def max_of_three (first_numbers, second_numbers, third_numbers): 
+#   temporary = max_of_two(first_numbers, second_numbers) 
+#   return max_of_two(temporary, third_numbers) 
+
+
+# first_numbers = int(input("Введите первое число: ")) 
+# second_numbers = int(input("Введите второе число: ")) 
+# third_numbers = int(input("Введите третье: ")) 
+# print("Самое большое число:", max_of_three(first_numbers, second_numbers, third_numbers )) 
+
+#Задача 3
+
+# def uspend(number):
+#     temporary_number = 0
+#     digit_number = 0  
+#     while number > 0:
+#         digit_number = number % 10
+#         number //= 10
+#         temporary_number *= 10
+#         temporary_number = temporary_number + digit_number
+#     return temporary_number
+
+  
+# number_n = int(input("Введите первое число: "))
+# number_k = int(input("Введите второе число: "))
+# print("Первое число наоборот:", uspend(number_n))
+# print("Второе число наоборот:", uspend(number_k))
+
+
+#Задача 4
+
+# def count_numbers(number):
+#     result = 0
+#     while number > 0:
+#         result += 1
+#         number //= 10
+#     return result
+
+# def change_number(number, num_count):
+#     last_digit = number % 10
+#     first_digit = number // 10 ** (num_count - 1)
+#     between_digits = number % 10 ** (num_count - 1) // 10
+#     return last_digit * 10 ** (num_count - 1) + between_digits * 10 + first_digit
+
+# def main():
+#     while True:
+#         first_n = int(input("Введите первое число: "))
+#         first_num_count = count_numbers(first_n)
+#         if first_num_count < 3:
+#             print("В первом числе меньше трёх цифр.")
+#         else:
+#             break
+
+#     first_n = change_number(first_n, first_num_count)
+#     print("Изменённое первое число:", first_n)
+
+#     while True:
+#         second_n = int(input("\nВведите второе число: "))
+#         second_num_count = count_numbers(second_n)
+#         if second_num_count < 4:
+#             print("Во втором числе меньше четырёх цифр.")
+#         else:
+#             break
+
+#     second_n = change_number(second_n, second_num_count)
+#     print("\nИзменённое второе число:", second_n)
+#     print("Сумма чисел:", first_n + second_n)
+
+# main()
+
+#Задача 5
+
+# def amp_count(initial_amplitude, finite_amplitude):
+#     count = 0
+#     falloff_factor = 0.916
+#     if initial_amplitude <= 0 or finite_amplitude <= 0:
+#         print("Амплитуды должны быть положительными числами.")
+#     elif initial_amplitude < finite_amplitude:
+#         print("Начальная амплитуда должна быть больше конечной амплитуды.")
+#     while initial_amplitude > finite_amplitude:
+#         count += 1 
+#         initial_amplitude *= falloff_factor
+#     print(f"Маятник считается остановившимся через {count} колебаний.") 
+
+# initial_amplitude = float(input("Введите начальную амплитуду: "))
+# finite_amplitude = float(input("Введите амплитуду остановку: "))
+
+# amp_count(initial_amplitude, finite_amplitude)
 
 
 
+#Финальная работа №1
 
 
+def main():
+    print("\nГЛАВНОЕ МЕНЮ")
+    print("1 - Вывести или обновить информацию\n2 - Вывести информацию\n0 - Завершить работу ")
+    choice = input("Введите номер пункта меню: ")
+    if choice == 1:
+        #вызов функции
+    elif choice == 2:
+        #вызов функции 2 
+    elif:
+        #выход из программы
 
 
+print("Приложение MyProfile.")
+print("Сохраняй информацию о себе и выводи её в разных форматах.")
 
-
-
-
-
-
-
-
+main()
 
 
 

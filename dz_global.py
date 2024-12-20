@@ -539,56 +539,56 @@
 
 #Задание 1
 
-from tkinter import*
+# from tkinter import*
 
-window = Tk()
-window.title("Калькулятор")
-window.geometry("300x300")
-window.config(bg="#000")
+# window = Tk()
+# window.title("Калькулятор")
+# window.geometry("300x300")
+# window.config(bg="#000")
 
-def addition():
-    print(int(first_number.get()) + int(second_number.get()))
+# def addition():
+#     print(int(first_number.get()) + int(second_number.get()))
 
-def subtraction():
-    print(int(first_number.get()) - int(second_number.get()))
+# def subtraction():
+#     print(int(first_number.get()) - int(second_number.get()))
 
-def division():
-        print(int(first_number.get()) / int(second_number.get()))
+# def division():
+#         print(int(first_number.get()) / int(second_number.get()))
 
-def multiplication():
-    print(int(first_number.get()) * int(second_number.get()))
-
-
-first_text = Label(text="Введите первое число", font=("Segoe Print", 8), bg="white")
-first_text.place(x=90, y=20)
-
-first_number = Entry(width=5, font=("Arial", 13), bg="white", fg="lime")
-first_number.place(x=130, y=50)
-
-second_text = Label(text="Введите второе число", font=("Segoe Print", 8), bg="white")
-second_text.place(x=90, y=80)
-
-second_number = Entry(width=5, font=("Arial", 13), bg="white", fg="lime")
-second_number.place(x=130, y=110)
-
-info_text = Label(text="Выберите действие:",font=("Arial Black", 10), bg="purple" )
-info_text.place(x=80, y=150)
-
-addition_btn = Button(text="Сложение", command=addition, font=("Times New Roman", 9),  bg="green")
-addition_btn.place(x=130, y=185)
-
-subtraction_btn = Button(text="Вычитание", command=subtraction, font=("Times New Roman", 9),  bg="green")
-subtraction_btn.place(x=130, y=210)
-
-division_btn = Button(text="Деление", command=division, font=("Times New Roman", 9),  bg="green")
-division_btn.place(x=130, y=235)
-
-multiplication_btn = Button(text="Умножение", command=multiplication, font=("Times New Roman", 9),  bg="green")
-multiplication_btn.place(x=130, y=260)
+# def multiplication():
+#     print(int(first_number.get()) * int(second_number.get()))
 
 
+# first_text = Label(text="Введите первое число", font=("Segoe Print", 8), bg="white")
+# first_text.place(x=90, y=20)
 
-window.mainloop()
+# first_number = Entry(width=5, font=("Arial", 13), bg="white", fg="lime")
+# first_number.place(x=130, y=50)
+
+# second_text = Label(text="Введите второе число", font=("Segoe Print", 8), bg="white")
+# second_text.place(x=90, y=80)
+
+# second_number = Entry(width=5, font=("Arial", 13), bg="white", fg="lime")
+# second_number.place(x=130, y=110)
+
+# info_text = Label(text="Выберите действие:",font=("Arial Black", 10), bg="purple" )
+# info_text.place(x=80, y=150)
+
+# addition_btn = Button(text="Сложение", command=addition, font=("Times New Roman", 9),  bg="green")
+# addition_btn.place(x=130, y=185)
+
+# subtraction_btn = Button(text="Вычитание", command=subtraction, font=("Times New Roman", 9),  bg="green")
+# subtraction_btn.place(x=130, y=210)
+
+# division_btn = Button(text="Деление", command=division, font=("Times New Roman", 9),  bg="green")
+# division_btn.place(x=130, y=235)
+
+# multiplication_btn = Button(text="Умножение", command=multiplication, font=("Times New Roman", 9),  bg="green")
+# multiplication_btn.place(x=130, y=260)
+
+
+
+# window.mainloop()
 
 #Задание 2 
 
@@ -612,13 +612,13 @@ window.mainloop()
 # login = Label(text="Логин", font=("Helvetica", 15), fg="aquamarine", bg="black")
 # login.place(x=430, y = 160)
 
-# entry_login = Entry(width=11, font=(" Arial", 13), bg="black", fg="lime")
+# entry_login = Entry(width=11, font=("Arial", 13), bg="black", fg="lime")
 # entry_login.place(x=410, y = 200)
 
 # password = Label(text="Пароль", font=("Helvetica", 15), fg="aquamarine", bg="black")
 # password.place(x=420, y = 230)
 
-# entry_password = Entry(width=11, font=(" Arial", 13), bg="black", fg="lime")
+# entry_password = Entry(width=11, font=("Arial", 13), bg="black", fg="lime")
 # entry_password.place(x=410, y = 270)
 
 # but_enter = Button(text="Войти", command=click, font=("Times New Roman", 17), fg="black", bg="purple")
@@ -627,7 +627,46 @@ window.mainloop()
 
 # window.mainloop()
 
+#Задание на Listbox
 
+# Задание 1
+
+from tkinter import*
+
+window = Tk()
+window.title("Касса")
+window.geometry("700x500")
+window.config(bg="#c4efef")
+
+def buy():
+    roster_listbox.insert(0 , product_ent.get())
+addition_btn = Button(text= "Добавить товар", fg="#000", command=buy)
+addition_btn.place(x=330, y=345)
+
+
+def delet_product():
+    roster_listbox.delete(0, roster_listbox.curselection())
+deleted_btn = Button(text= "Удалить товар", fg="#000", command=delet_product)
+deleted_btn.place(x=335, y=385)
+
+purchases_lbl = Label(text="Список покупок:", font =(" Arial", 12))
+purchases_lbl.place(x=200, y=150)
+
+array_product = []
+roster_listbox = Listbox(listvariable= Variable(value=array_product))
+roster_listbox.place(x=200, y=180)
+
+product_ent= Entry(bg="#f7f7f7", fg="#0d0c0d", font=("Times New Roman", 9))
+product_ent.place(x=200, y=345, height=27)
+
+def cost_product():
+#итоговая сумма покупок
+    1.
+
+result_lbl = Label(text="\nИтоговая сумма:\nрублей", font =(" Arial", 10))
+result_lbl.place(x=50, y=345)
+
+window.mainloop()
 
 
 
