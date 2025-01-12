@@ -485,6 +485,139 @@
     #     json.dump(calculator_arr , file) 
     # text = input("Введите start для начала работы калькулятора: ")
 
+#Сортировка пузырьком 
+
+#Задание 1 
+
+# from array import array
+# import random
+# import time
+
+# arr = array("i")
+
+# for i in range(10000):
+#     arr.append(random.randint(1,1000))
+
+
+
+# def fun_sort(arr_loc):
+#     for el in arr_loc:
+#         for index in range(len(arr_loc)-1):
+#             if(arr_loc[index] > arr_loc[index+1]):
+#                 element = arr_loc[index]
+#                 arr_loc[index] = arr_loc[index+1]
+#                 arr_loc[index + 1] = element
+#     return(arr_loc)
+
+
+
+# old_time = time.time()
+# fun_sort(arr)
+# print(time.time() - old_time)
+
+#Задание 2
+
+# from array import array
+# import threading
+# import random
+# import time
+
+# arr = array("i")
+
+# for i in range(10000):
+#     arr.append(random.randint(1,1000))
+
+
+
+
+# def mini_sort_1():
+#     global arr_1
+#     for el in arr_1:
+#         for index in range(len(arr_1)-1):
+#             if(arr_1[index] > arr_1[index+1]):
+#                 element = arr_1[index]
+#                 arr_1[index] = arr_1[index+1]
+#                 arr_1[index + 1] = element
+
+# def mini_sort_2():
+#     global arr_2
+#     for el in arr_2:
+#         for index in range(len(arr_2)-1):
+#             if(arr_2[index] > arr_2[index+1]):
+#                 element = arr_2[index]
+#                 arr_2[index] = arr_2[index+1]
+#                 arr_2[index + 1] = element
+
+
+
+
+
+# def fun_sort(arr_loc):
+#     global arr_1
+#     global arr_2
+#     arr_1 = array(arr_loc.typecode)
+#     arr_2 = array(arr_loc.typecode)
+#     for i in range(len(arr_loc) // 2):
+        # print(arr_loc[i])
+        # arr_1.append(arr_loc[i])
+    # for i in range(len(arr_loc) // 2 , len(arr_loc)):
+        # print(arr_loc[i])
+        # arr_2.append(arr_loc[i])
+
+
+    # print(arr_1)
+    # print(arr_2)
+    # thread_1 = threading.Thread(target = mini_sort_1)
+    # thread_1.start()
+    # thread_2 = threading.Thread(target = mini_sort_2)
+    # thread_2.start()
+    # thread_1.join()
+    # thread_2.join()
+
+    # print(arr_1)
+    # print(arr_2)
+
+    
+    # new_arr = array(arr_loc.typecode)
+
+    # num_1 = 0
+    # num_2 = 0
+    # end_1 = False
+    # end_2 = False
+    # while(len(new_arr) != len(arr_loc)):
+    #     if(end_2):
+    #         new_arr.append(arr_1[num_1])
+    #         num_1+=1
+    #     elif(end_1):
+    #         new_arr.append(arr_2[num_2])
+    #         num_2+=1
+    #     elif(arr_1[num_1] < arr_2[num_2]):
+    #         new_arr.append(arr_1[num_1])
+    #         num_1+=1
+    #     elif(arr_2[num_2] < arr_1[num_1]):
+    #         new_arr.append(arr_2[num_2])
+    #         num_2+=1
+    #     elif(arr_2[num_2] == arr_1[num_1]):
+    #         new_arr.append(arr_1[num_1])
+    #         new_arr.append(arr_2[num_2])
+    #         num_1+=1
+    #         num_2+=1
+    #     if(len(arr_1) == num_1):
+            # num_1 -= 1
+        #     end_1 = True
+        # if(len(arr_2) == num_2):
+            # num_2 -= 1
+    #         end_2 = True
+        
+    # return new_arr
+        
+
+# print(arr)
+# print(fun_sort(arr))
+
+# old_time = time.time()
+# fun_sort(arr)
+# print(time.time() - old_time)
 
 # Задачи на TK start
 
@@ -631,62 +764,144 @@
 
 # Задание 1
 
-from tkinter import*
+# from tkinter import*
+# from tkinter import ttk
+
+
+
+# window = Tk()
+# window.title("Касса")
+# window.geometry("700x500")
+# window.config(bg="#c4efef")
+
+
+# def delet_product():
+#     roster_listbox.delete(0, roster_listbox.curselection())
+
+# def click_butt():
+#     print(product_choice.get())
+    
+
+
+# deleted_btn = Button(text= "Удалить товар", fg="#000", command=delet_product)
+# deleted_btn.place(x=10, y=550)
+
+# addition_btn = Button(text= "Добавить товар", fg="#000", command=click_butt)
+# addition_btn.place(x=550, y=330)
+
+# list_product_lbl = Label(text="Список товаров:", font =(" Arial", 12) )
+# list_product_lbl.place(x=550, y=150)
+
+# bread = "Хлеб"
+# milk = "Молоко"
+# chicken_eggs = "Куриные яйца"
+# potato = "Картофель"
+# carrot = "Морковь"
+
+# product_choice = StringVar(value="none")
+
+# first_product_rbtn = ttk.Radiobutton(text= "Хлеб", variable=product_choice, value="Хлеб_40")
+# first_product_rbtn.place(x=550, y=180)
+
+# second_product_rbtn = ttk.Radiobutton(text= "Молоко", variable=product_choice, value="Молоко")
+# second_product_rbtn.place(x=550, y=210)
+
+# third_product_rbtn = ttk.Radiobutton(text= "Яйца куриные", variable=product_choice, value="Яйца куриные")
+# third_product_rbtn.place(x=550, y=240)
+
+# fourth_product_rbtn = ttk.Radiobutton(text= "Картофель", variable=product_choice, value="Картофель")
+# fourth_product_rbtn.place(x=550, y=270)
+
+# fifth_product_rbtn = ttk.Radiobutton(text= "Морковь", variable=product_choice, value="Морковь")
+# fifth_product_rbtn.place(x=550, y=300)
+
+# purchases_lbl = Label(text="Список покупок:", font =(" Arial", 12))
+# purchases_lbl.place(x=200, y=150)
+
+# array_product = []
+# roster_listbox = Listbox(listvariable= Variable(value=array_product))
+# roster_listbox.place(x=200, y=180)
+
+# window.mainloop()
+
+#Задание на Scale 
+
+#Задание 1 
+
+# from tkinter import *
+# from tkinter import ttk
+
+# window = Tk()
+# window.title("Line")
+# window.geometry("900x600")
+# window.config(bg="#c4efef")
+
+# def moving_horizontal(value):
+#     line_horizontal.place(x=int(float(value)))
+
+# def moving_vertical(value):
+#     line_vertical.place(x=int(float(value)))
+
+# line_horizontal = Label(text="___________________")
+# line_horizontal.place(x=210, y=400)
+
+# line_vertical = Label(text="\n|\n|\n|\n|\n|\n|\n|\n|\n")
+# line_vertical.place(x=200, y=350)
+
+# scale_horizontal = ttk.Scale(orient=HORIZONTAL , length=200 , from_=1 , to=600 , value=5 , command=moving_horizontal)
+# scale_horizontal.place(x=300 , y=5)
+
+# scale_horizontal = ttk.Scale(orient=VERTICAL , length=200 , from_=1 , to=600 , value=5 , command=moving_vertical)
+# scale_horizontal.place(x=200 , y=1)
+
+# window.mainloop()
+
+#Задание на Keyboard
+
+#Задание 1
+
+from tkinter import *
 from tkinter import ttk
 
-
-
 window = Tk()
-window.title("Касса")
-window.geometry("700x500")
-window.config(bg="#c4efef")
+window.title("Game 'Clicker'")
+window.geometry("600x500")
+window.config(bg="#e7e4d6")
 
+# def funPress(event):
+#     if(event.keysym == ""):
+#     if(event.keysym == "" and event.state == ):
+# window.bind("<KeyPress>" , funPress)
+# def funRelease(event):
+#     if(event.keysym == ""):
+#     if(event.keysym == "" and event.state == ):
+# window.bind("<KeyRelease>" , funRelease)
 
-def delet_product():
-    roster_listbox.delete(0, roster_listbox.curselection())
+main_menu = Menu()
 
+action_menu = Menu(main_menu , tearoff=0)
+action_menu.add_command(label="settings")
+action_menu.add_separator()
 
-deleted_btn = Button(text= "Удалить товар", fg="#000", command=delet_product)
-deleted_btn.place(x=10, y=550)
+def change_color():
+    if choice_radio.get() == "butt_1":
+        window.config(bg="#06068d")
+        text_lbl.config(bg="#d6fa08")
 
-addition_btn = Button(text= "Добавить товар", fg="#000")
-addition_btn.place(x=550, y=330)
+def change_size():
+    if choice_radio.get() == "butt_2":
+        window.geometry("700x800")
+        text_lbl.config(font=("Ink Free" , 15))
 
-list_product_lbl = Label(text="Список товаров:", font =(" Arial", 12) )
-list_product_lbl.place(x=550, y=150)
+choice_radio = StringVar(value="")
+action_menu.add_radiobutton(variable=choice_radio, value="butt_1", label="color", command=change_color)
+action_menu.add_radiobutton(variable=choice_radio, value="butt_2", label="size", command=change_size)
 
-bread = "Хлеб"
-milk = "Молоко"
-chicken_eggs = "Куриные яйца"
-potato = "Картофель"
-carrot = "Морковь"
+main_menu.add_cascade(label="Menu" , menu=action_menu)
 
-product_choice = StringVar(value="Хлеб")
+text_lbl = Label(text="Зажми клавиши 'z' и 'h' для вызова меню", font=("Ink Free" , 12))
+text_lbl.place(x=200, y=200)
 
-first_product_rbtn = ttk.Radiobutton(text= "Хлеб", variable=product_choice, value="Хлеб")
-first_product_rbtn.place(x=550, y=180)
-
-second_product_rbtn = ttk.Radiobutton(text= "Молоко", variable=product_choice, value="Молоко")
-second_product_rbtn.place(x=550, y=210)
-
-third_product_rbtn = ttk.Radiobutton(text= "Яйца куриные", variable=product_choice, value="Яйца куриные")
-third_product_rbtn.place(x=550, y=240)
-
-fourth_product_rbtn = ttk.Radiobutton(text= "Картофель", variable=product_choice, value="Картофель")
-fourth_product_rbtn.place(x=550, y=270)
-
-fifth_product_rbtn = ttk.Radiobutton(text= "Морковь", variable=product_choice, value="Морковь")
-fifth_product_rbtn.place(x=550, y=300)
-
-purchases_lbl = Label(text="Список покупок:", font =(" Arial", 12))
-purchases_lbl.place(x=200, y=150)
-
-array_product = []
-roster_listbox = Listbox(listvariable= Variable(value=array_product))
-roster_listbox.place(x=200, y=180)
+window.config(menu=main_menu)
 
 window.mainloop()
-
-
-
-
