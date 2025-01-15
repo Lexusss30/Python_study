@@ -840,18 +840,23 @@
 #     line_horizontal.place(x=int(float(value)))
 
 # def moving_vertical(value):
-#     line_vertical.place(x=int(float(value)))
+#     line_vertical.place(y=int(float(value)))
 
-# line_horizontal = Label(text="___________________")
-# line_horizontal.place(x=210, y=400)
 
-# line_vertical = Label(text="\n|\n|\n|\n|\n|\n|\n|\n|\n")
-# line_vertical.place(x=200, y=350)
+    
+# value_button = Button(text="Value:")
+# value_button.place(x=100 , y=5)
 
-# scale_horizontal = ttk.Scale(orient=HORIZONTAL , length=200 , from_=1 , to=600 , value=5 , command=moving_horizontal)
+# line_horizontal = Label(bg="#000")
+# line_horizontal.place(x=210, y=400, width=100, height=2)
+
+# line_vertical = Label(bg="#000")
+# line_vertical.place(x=200, y=350, width=2, height=100)
+
+# scale_horizontal = ttk.Scale(orient=HORIZONTAL , length=100 , from_=1 , to=200 , value=5 , command=moving_horizontal)
 # scale_horizontal.place(x=300 , y=5)
 
-# scale_horizontal = ttk.Scale(orient=VERTICAL , length=200 , from_=1 , to=600 , value=5 , command=moving_vertical)
+# scale_horizontal = ttk.Scale(orient=VERTICAL , length=100 , from_=1 , to=200 , value=5 , command=moving_vertical)
 # scale_horizontal.place(x=200 , y=1)
 
 # window.mainloop()
@@ -860,48 +865,72 @@
 
 #Задание 1
 
-from tkinter import *
-from tkinter import ttk
+# from tkinter import *
+# from tkinter import ttk
 
-window = Tk()
-window.title("Game 'Clicker'")
-window.geometry("600x500")
-window.config(bg="#e7e4d6")
+# window = Tk()
+# window.title("Game 'Clicker'")
+# window.geometry("600x500")
+# window.config(bg="#e7e4d6")
 
 # def funPress(event):
-#     if(event.keysym == ""):
-#     if(event.keysym == "" and event.state == ):
+#     if(event.keysym == "q"):
+#         window.config(menu=main_menu)
 # window.bind("<KeyPress>" , funPress)
+
 # def funRelease(event):
-#     if(event.keysym == ""):
-#     if(event.keysym == "" and event.state == ):
+#     if(event.keysym == "q"):
+#         window.config(menu=none_menu)
 # window.bind("<KeyRelease>" , funRelease)
 
-main_menu = Menu()
+# main_menu = Menu()
+# none_menu = Menu()
 
-action_menu = Menu(main_menu , tearoff=0)
-action_menu.add_command(label="settings")
-action_menu.add_separator()
+# action_menu = Menu(main_menu , tearoff=0)
+# action_menu.add_command(label="settings")
+# action_menu.add_separator()
 
-def change_color():
-    if choice_radio.get() == "butt_1":
-        window.config(bg="#06068d")
-        text_lbl.config(bg="#d6fa08")
+# def change_color():
+#     if choice_radio.get() == "butt_1":
+#         window.config(bg="#06068d")
+#         text_lbl.config(bg="#d6fa08")
 
-def change_size():
-    if choice_radio.get() == "butt_2":
-        window.geometry("700x800")
-        text_lbl.config(font=("Ink Free" , 15))
+# def change_size():
+#     if choice_radio.get() == "butt_2":
+#         window.geometry("700x800")
+#         text_lbl.config(font=("Ink Free" , 15))
 
-choice_radio = StringVar(value="")
-action_menu.add_radiobutton(variable=choice_radio, value="butt_1", label="color", command=change_color)
-action_menu.add_radiobutton(variable=choice_radio, value="butt_2", label="size", command=change_size)
+# choice_radio = StringVar(value="")
+# action_menu.add_radiobutton(variable=choice_radio, value="butt_1", label="color", command=change_color)
+# action_menu.add_radiobutton(variable=choice_radio, value="butt_2", label="size", command=change_size)
 
-main_menu.add_cascade(label="Menu" , menu=action_menu)
+# main_menu.add_cascade(label="Menu" , menu=action_menu)
 
-text_lbl = Label(text="Зажми клавиши 'z' и 'h' для вызова меню", font=("Ink Free" , 12))
-text_lbl.place(x=200, y=200)
+# text_lbl = Label(text="Зажмите клавишу 'q' для вызова меню", font=("Ink Free" , 12))
+# text_lbl.place(x=200, y=200)
 
-window.config(menu=main_menu)
+# window.config(menu=none_menu)
+
+# window.mainloop()
+
+#Задание на Canvas
+
+#Задание 1 
+
+from tkinter import *
+
+window = Tk()
+window.title("Picture")
+window.geometry("600x500")
+window.config(bg="#c4efef")
+
+main_canvas = Canvas(width=600 , height=500 , bg="#e9f1e5")
+main_canvas.place(x=0 , y=0)
+
+main_canvas.create_rectangle(350, 400, 200, 200, fill="#0b14c7", outline="#f41111")
+
+main_canvas.create_polygon(350, 300, 430, 240, 150, 200, fill="#464122")
+
+main_canvas.create_oval(500, 10, 580, 90, fill="#f8f402")
 
 window.mainloop()
