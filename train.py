@@ -1056,103 +1056,49 @@
 
 # amp_count(initial_amplitude, finite_amplitude)
 
+#2.1 Списки и их инициализация
 
+#Задача 1 
 
-#Финальная работа №1
+# numbers = [3,7,5]
 
+# while True:
+#     number = int(input("Новое число: "))
+#     numbers.append(number)
+#     print("Текущий список чисел:", numbers)
+#     for i in numbers:
+#         print(i ** 2, i ** 3, i ** 4)
 
-def main():
-    print("\nГЛАВНОЕ МЕНЮ")
-    print("1 - Вывести или обновить информацию\n2 - Вывести информацию\n0 - Завершить работу ")
-    choice = int(input("Введите номер пункта меню: "))
-    if choice == 1:
-        information()
-    elif (choice == 2):
-        print("ВЫВЕСТИ ИНФОРМАЦИЮ")
-        print("1 - Общая информация\n2 - Вся информация\n0 - Назад ")
-        option = input("Введите номер пункта меню: ")
-        if option == 1:
-        # вызов 
-            print(info)
-        elif option == 2:
-            print(info, entrepreneur)
-        elif option == 3:
-            return main()    
-    # elif choice == 0:
-    #     break
-        #выход из программы
+#Задача 2
 
+# numbers = []
+# for amount in range(0,100 + 1):
+#     numbers.append(amount)
+# print(numbers)
 
-global info
-info = {}
-def information():
-    print("ВЫВЕСТИ ИЛИ ОБНОВИТЬ ИНФОРМАЦИЮ")
-    print("1 - Личная информация\n2 - Информация о предпринимателе\n0 - Назад ")
-    point = int(input("Введите номер пункта меню: "))
-    if point == 1:
-        name = input("Введите имя: ")
-        age = int(input("Введите возраст: "))
-        while age < 0:
-            age = int(input("Введите возраст: "))
-        phone_number = int(input("Введите номер телефона (+7ХХХХХХХХХХ): "))
-        address_mail = input("Введите адрес электронной почты: ")
-        postal_mail = input("Введите почтовый адрес(без индекса): ")
-        postal_code = input("Введите почтовый индекс: ")
-        postal_code_result = ""
-        for i in postal_code:
-            if i.isdigit():
-                postal_code_result += i 
-        additionally = input("Введите допольнительную информацию: ")
-        global info
-        info = { "name" : name,
-                "age" : age,
-                "phone_number" : phone_number,
-                "address_mail" : address_mail, 
-                "postal_mail" : postal_mail,
-                "postal_code_result" : postal_code_result,
-                "additionally" : additionally
-        }
-        return main()
-    elif point == 2:
-        entrepreneur = {}
-    
-        
-global entrepreneur
-entrepreneur = {}
-def entrepreneurship():
-    ogrnip = int(input("Введите ОГРНИП: "))
-    if len(str(ogrnip)) < 15:
-        print("ОГРНИП должен содержать больше 15 чисел")
-        ogrnip = int(input("Введите ОГРНИП: "))
-    inn = int(input("Введите ИНН: "))
-    current_account = int(input("Введите расчётный счёт: "))
-    bank = input("Введите название банка: ")
-    bik = int(input("Введите БИК: "))
-    correspondent_account = int(input("Введите корреспондентский счёт: "))
-    global entrepreneur
-    entrepreneur = {"ogrnip" : ogrnip,
-                    "inn" : inn,
-                    "current_account" : current_account,
-                    "bank" : bank,
-                    "bik" : bik,
-                    "correspondent_account" : correspondent_account
-        }
-    return main()
-        
+#Задача 3 
 
-print("Приложение MyProfile.")
-print("Сохраняй информацию о себе и выводи её в разных форматах.")
+# count_of_workers = int(input("Кол-во сотрудников в офисе: "))
+# workers_id = []
+# for _ in range(count_of_workers):
+#     worker_id = int(input("ID сотрудника: "))
+#     workers_id.append(worker_id)
 
-main()
+# search_id = int(input("Какого сотрудника ищем? "))
 
+# search = False
+# for id in workers_id:
+#     if id == search_id:
+#         search = True
 
+# if search:
+#     print("Сотрудник работает!")
+# else:
+#     print("Сотрудник не работает!")
 
+# if search_id not in workers_id:  
+#     print("Сотрудник не работает!")
+# else:
+#     print("Сотрудник работает!")
 
         
-
-        
-
-
-
-
-

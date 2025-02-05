@@ -63,4 +63,4 @@ lab.place(x=30 , y=60)
 # window.bind("<MouseWheel>" , fun_mouse_wheel)
 
 
-window.mainloop()
+# window.mainloop()
