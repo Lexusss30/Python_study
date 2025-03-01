@@ -913,7 +913,7 @@
 
 # window.mainloop()
 
-#Задание на Canvas
+#Задание на Canvas (часть 1)
 
 #Задание 1 
 
@@ -934,3 +934,83 @@
 # main_canvas.create_oval(500, 10, 580, 90, fill="#f8f402")
 
 # window.mainloop()
+
+#Задание на Canvas (часть 2)
+
+#Задание 1
+
+# from tkinter import *
+
+# window = Tk()
+# window.title("Homework")
+# window.geometry("600x500")
+# window.config(bg="#c4efef")
+
+
+# canv_text = Canvas(width=600 , height=500 , bg="#b0aaaa")
+# canv_text.place(x=0 , y=0)
+# canv_text.create_text(300 , 250 , text="Hello World" , justify="center" , fill="#5600bf" , font="Arial 15")
+# canv_text.create_text(280 , 225 , text="Hello World" , justify="center" , fill="#7a787b" , font="Arial 15")
+
+# window.mainloop()
+
+
+#Задание 2
+
+# from tkinter import *
+# from tkinter import ttk
+
+
+# window = Tk()
+# window.title("Homework")
+# window.geometry("600x500")
+# window.config(bg="#c4efef")
+
+# main_canvas = Canvas(width=600 , height=500 , bg="#8f918f")
+# main_canvas.place(x=0 , y=0)
+
+# def size():
+    
+    
+# def corner():
+    
+
+
+# main_canvas.create_arc(40 , 40 , 250 , 250 , fill="#d4d106" , start = 0 , extent = 90, outline="#e21d1d" , style = "pieslice")
+
+# size_scale = ttk.Scale(orient=HORIZONTAL, length=50, from_=1, to=100, value=5)
+# size_scale.place(x=450, y=250)
+
+# corner_scale = ttk.Scale(orient=VERTICAL, length=50, from_=1, to=100, value=5)
+# corner_scale.place(x=500, y=300)
+
+
+# window.mainloop()
+
+
+#Задание 3 
+
+from tkinter import *
+
+window = Tk()
+window.title("Clicker")
+window.geometry("600x500")
+window.config(bg="#c4efef")
+
+main_canvas = Canvas(width=600 , height=500 , bg="#8f918f")
+main_canvas.place(x=0 , y=0)
+
+def moving(event):
+    #перемещение окна при зажатии ПКМ
+
+
+    window.bind("<Button-3>" , moving)
+
+main_canvas.create_rectangle(150,200,300,350 , fill = "#1bf590" , width=0)
+
+clicker_btn = Button(text="Клик", font=("Segoe Print" , 15) , fg="#9720ff")
+clicker_btn.place(x= 200, y= 250)
+
+
+
+window.mainloop()
